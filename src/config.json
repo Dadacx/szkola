@@ -1,0 +1,84 @@
+{
+    "grupy": [
+        {
+            "id": "gr1",
+            "nazwa": "Grupa 1"
+        },
+        {
+            "id":"gr2",
+            "nazwa":"Grupa 2"
+        },
+        {
+            "id":"obie",
+            "nazwa":"Obie"
+        }
+    ],
+    "typ": [
+        {
+            "id": "kartkowka",
+            "nazwa": "Kartkówka"
+        },
+        {
+            "id":"sprawdzian",
+            "nazwa":"Sprawdzian"
+        },
+        {
+            "id":"zadanie",
+            "nazwa":"Zadanie domowe"
+        },
+        {
+            "id":"pytanie",
+            "nazwa":"Pytanie"
+        }
+    ],
+    "przedmioty": [
+        {
+            "id": "historia",
+            "nazwa": "Historia"
+        },
+        {
+            "id":"j_ang",
+            "nazwa":"J. angielski"
+        },
+        {
+            "id":"j_niemiecki",
+            "nazwa":"J. niemiecki"
+        },
+        {
+            "id":"j_polski",
+            "nazwa":"J. polski"
+        },
+        {
+            "id": "j_rosyjski",
+            "nazwa": "J. rosyjski"
+        },
+        {
+            "id":"matematyka",
+            "nazwa":"Matematyka"
+        },
+        {
+            "id":"religia",
+            "nazwa":"Religia"
+        },
+        {
+            "id":"wos",
+            "nazwa":"Wiedza o społeczeństwie"
+        },
+        {
+            "id": "wf",
+            "nazwa": "Wychowanie fizyczne"
+        },
+        {
+            "id":"python",
+            "nazwa":"Programowanie w języku Python"
+        },
+        {
+            "id":"smart_dom",
+            "nazwa":"Systemy zarządzające inteligentnym domem"
+        },
+        {
+            "id":"j_polski",
+            "nazwa":"J. polski"
+        }
+    ]
+}

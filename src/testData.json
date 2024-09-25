@@ -1,0 +1,44 @@
+[
+    {
+        "grupa":"obie",
+        "przedmiot":"historia",
+        "typ":"sprawdzian",
+        "data":"2024-10-01",
+        "opis":"Jakiś opis historii"
+    },
+    {
+        "grupa":"gr1",
+        "przedmiot":"j_ang",
+        "typ":"kartkowka",
+        "data":"2024-10-11",
+        "opis":"Jakiś opis angielskiego"
+    },
+    {
+        "grupa":"gr2",
+        "przedmiot":"j_niemiecki",
+        "typ":"pytanie",
+        "data":"2024-11-01",
+        "opis":"Jakiś opis niemieckiego"
+    },
+    {
+        "grupa":"gr2",
+        "przedmiot":"j_rosyjski",
+        "typ":"zadanie",
+        "data":"2024-09-25",
+        "opis":"Jakiś opis rosyjskiego"
+    },
+    {
+        "grupa":"obie",
+        "przedmiot":"matematyka",
+        "typ":"zadanie",
+        "data":"2024-09-27",
+        "opis":"Jakiś opis matematyki"
+    },
+    {
+        "grupa":"obie",
+        "przedmiot":"wos",
+        "typ":"sprawdzian",
+        "data":"2024-09-30",
+        "opis":"Jakiś opis wosu"
+    }
+]
