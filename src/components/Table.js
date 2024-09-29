@@ -1,6 +1,7 @@
 import config from '../config.json'
 import Fetch from './Fetch';
 import testData from '../testData.json'
+import SetName from './SetName';
 function date_format(date) {
     const data = new Date(date)
 
@@ -53,9 +54,9 @@ const Table = (props) => {
             <table>
                 <tr><th>Grupa</th><th>Przedmiot</th><th>Typ</th><th>Opis</th><th>Data</th></tr>
                 {data.map(data => {
-                    if(props.zakres == "today" && isToday(data.data)) return <tr><td>{config.grupy.find(x => data.grupa == x.id).nazwa}</td><td>{config.przedmioty.find(x => data.przedmiot == x.id).nazwa}</td><td>{config.typ.find(x => data.typ == x.id).nazwa}</td><td>{data.opis}</td><td>{date_format(data.data)}</td></tr>
-                    else if(props.zakres == "week" && isWeek(new Date(data.data))) return <tr><td>{config.grupy.find(x => data.grupa == x.id).nazwa}</td><td>{config.przedmioty.find(x => data.przedmiot == x.id).nazwa}</td><td>{config.typ.find(x => data.typ == x.id).nazwa}</td><td>{data.opis}</td><td>{date_format(data.data)}</td></tr>
-                    else if(props.zakres == "all") return <tr><td>{config.grupy.find(x => data.grupa == x.id).nazwa}</td><td>{config.przedmioty.find(x => data.przedmiot == x.id).nazwa}</td><td>{config.typ.find(x => data.typ == x.id).nazwa}</td><td>{data.opis}</td><td>{date_format(data.data)}</td></tr>
+                    if(props.zakres == "today" && isToday(data.data)) return <tr><td>{SetName("grupy",data.grupa)}</td><td>{SetName("przedmioty",data.przedmiot)}</td><td>{SetName("typ",data.typ)}</td><td>{data.opis}</td><td>{date_format(data.data)}</td></tr>
+                    else if(props.zakres == "week" && isWeek(new Date(data.data))) return <tr><td>{SetName("grupy",data.grupa)}</td><td>{SetName("przedmioty",data.przedmiot)}</td><td>{SetName("typ",data.typ)}</td><td>{data.opis}</td><td>{date_format(data.data)}</td></tr>
+                    else if(props.zakres == "all") return <tr><td>{SetName("grupy",data.grupa)}</td><td>{SetName("przedmioty",data.przedmiot)}</td><td>{SetName("typ",data.typ)}</td><td>{data.opis}</td><td>{date_format(data.data)}</td></tr>
                     })}
             </table>
         </div>

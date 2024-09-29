@@ -79,6 +79,10 @@
         {
             "id":"j_polski",
             "nazwa":"J. polski"
+        },
+        {
+            "id":"gzw",
+            "nazwa":"Godzina z wychowawcą"
         }
     ]
 }

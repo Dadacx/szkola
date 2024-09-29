@@ -1,0 +1,310 @@
+{
+    "godziny": [
+        "7:00-7:45",
+        "7:50-8:35",
+        "8:45-9:30",
+        "9:40-10:25",
+        "10:35-11:20",
+        "11:40-12:25",
+        "12:45-13:30",
+        "13:40-14:25",
+        "14:30-15:15"
+    ],
+    "poniedzialek": [
+        {
+            "nr": 1,
+            "przedmiot": "j_ang",
+            "grupa": "gr2",
+            "sala": "A48"
+        },
+        {
+            "nr": 2,
+            "przedmiot": "j_polski",
+            "grupa": "",
+            "sala": "B15"
+        },
+        {
+            "nr": 3,
+            "przedmiot": "j_niemiecki",
+            "grupa": "gr1",
+            "sala": "A35"
+        },
+        {
+            "nr": 3,
+            "przedmiot": "j_ang",
+            "grupa": "gr2",
+            "sala": "A48"
+        },
+        {
+            "nr": 4,
+            "przedmiot": "j_ang",
+            "grupa":"gr1",
+            "sala": "A46"
+        },
+        {
+            "nr": 4,
+            "przedmiot": "j_ang",
+            "grupa":"gr2",
+            "sala":"A48"
+        },
+        {
+            "nr": 5,
+            "przedmiot": "j_ang",
+            "grupa":"gr1",
+            "sala": "A46"
+        },
+        {
+            "nr": 5,
+            "przedmiot": "j_ang",
+            "grupa":"gr2",
+            "sala":"A48"
+        },
+        {
+            "nr": 6,
+            "przedmiot": "matematyka",
+            "grupa": "",
+            "sala": "A14"
+        }
+    ],
+    "wtorek":[
+        {
+            "nr":1,
+            "przedmiot":"smart_dom",
+            "grupa": "gr1",
+            "sala":"A26"
+        },
+        {
+            "nr":1,
+            "przedmiot":"python",
+            "grupa":"gr2",
+            "sala":"A27"
+        },
+        {
+            "nr":2,
+            "przedmiot":"smart_dom",
+            "grupa": "gr1",
+            "sala":"A26"
+        },
+        {
+            "nr":2,
+            "przedmiot":"python",
+            "grupa":"gr2",
+            "sala":"A27"
+        },
+        {
+            "nr":3,
+            "przedmiot":"smart_dom",
+            "grupa": "gr1",
+            "sala":"A26"
+        },
+        {
+            "nr":3,
+            "przedmiot":"python",
+            "grupa":"gr2",
+            "sala":"A27"
+        },
+        {
+            "nr":4,
+            "przedmiot":"smart_dom",
+            "grupa": "gr1",
+            "sala":"A26"
+        },
+        {
+            "nr":4,
+            "przedmiot":"python",
+            "grupa":"gr2",
+            "sala":"A27"
+        },
+        {
+            "nr":5,
+            "przedmiot":"j_polski",
+            "grupa":"",
+            "sala":"B15"
+        },
+        {
+            "nr":6,
+            "przedmiot":"j_polski",
+            "grupa":"",
+            "sala":"B15"
+        },
+        {
+            "nr":7,
+            "przedmiot":"religia",
+            "grupa":"",
+            "sala":"A01"
+        },
+        {
+            "nr":8,
+            "przedmiot":"j_ang",
+            "grupa":"gr2",
+            "sala":"A48"
+        }
+    ],
+    "sroda":[
+        {
+            "nr":1,
+            "przedmiot":"j_ang",
+            "grupa":"gr1",
+            "sala":"A46"
+        },
+        {
+            "nr":2,
+            "przedmiot":"j_ang",
+            "grupa":"gr1",
+            "sala":"A46"
+        },
+        {
+            "nr":3,
+            "przedmiot":"matematyka",
+            "grupa":"",
+            "sala":"A14"
+        },
+        {
+            "nr":4,
+            "przedmiot":"matematyka",
+            "grupa":"",
+            "sala":"A14"
+        },
+        {
+            "nr":5,
+            "przedmiot":"matematyka",
+            "grupa":"",
+            "sala":"A14"
+        },
+        {
+            "nr":6,
+            "przedmiot":"j_polski",
+            "grupa":"",
+            "sala":"B15"
+        },
+        {
+            "nr":7,
+            "przedmiot":"wos",
+            "grupa":"",
+            "sala":"B23"
+        }
+    ],
+    "czwartek":[
+        {
+            "nr":1,
+            "przedmiot":"j_rosyjski",
+            "grupa":"gr2",
+            "sala":"A45"
+        },
+        {
+            "nr":2,
+            "przedmiot":"religia",
+            "grupa":"",
+            "sala":"A34"
+        },
+        {
+            "nr":3,
+            "przedmiot":"gzw",
+            "grupa":"",
+            "sala":"B11"
+        },
+        {
+            "nr":4,
+            "przedmiot":"matematyka",
+            "grupa":"",
+            "sala":"W7"
+        },
+        {
+            "nr":5,
+            "przedmiot":"matematyka",
+            "grupa":"",
+            "sala":"W7"
+        },
+        {
+            "nr":6,
+            "przedmiot":"historia",
+            "grupa":"",
+            "sala":"B23"
+        },
+        {
+            "nr":7,
+            "przedmiot":"wf",
+            "grupa":"gr1",
+            "sala":""
+        },
+        {
+            "nr":7,
+            "przedmiot":"wf",
+            "grupa":"gr2",
+            "sala":""
+        }
+    ],
+    "piatek":[
+        {
+            "nr":2,
+            "przedmiot":"wf",
+            "grupa":"gr1",
+            "sala":""
+        },
+        {
+            "nr":2,
+            "przedmiot":"wf",
+            "grupa":"gr2",
+            "sala":""
+        },{
+            "nr":3,
+            "przedmiot":"wf",
+            "grupa":"gr1",
+            "sala":""
+        },
+        {
+            "nr":3,
+            "przedmiot":"wf",
+            "grupa":"gr2",
+            "sala":""
+        },
+        {
+            "nr":4,
+            "przedmiot":"j_ang",
+            "grupa":"gr1",
+            "sala":"A46"
+        },
+        {
+            "nr":4,
+            "przedmiot":"j_niemiecki",
+            "grupa":"gr2",
+            "sala":"A02"
+        },
+        {
+            "nr":5,
+            "przedmiot":"smart_dom",
+            "grupa":"gr1",
+            "sala":"A26"
+        },
+        {
+            "nr":5,
+            "przedmiot":"python",
+            "grupa":"gr2",
+            "sala":"A27"
+        },
+        {
+            "nr":6,
+            "przedmiot":"smart_dom",
+            "grupa":"gr1",
+            "sala":"A26"
+        },
+        {
+            "nr":6,
+            "przedmiot":"python",
+            "grupa":"gr2",
+            "sala":"A27"
+        },
+        {
+            "nr":7,
+            "przedmiot":"smart_dom",
+            "grupa":"gr1",
+            "sala":"A26"
+        },
+        {
+            "nr":7,
+            "przedmiot":"python",
+            "grupa":"gr2",
+            "sala":"A27"
+        }
+    ]
+}

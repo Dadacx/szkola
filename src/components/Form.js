@@ -1,6 +1,6 @@
 import config from '../config.json'
 
-function Form() {
+const Form = () => {
     return (
         <div className='form'>
             <form action='http://frog01.mikr.us:21339' target='iframe' method='POST'>
