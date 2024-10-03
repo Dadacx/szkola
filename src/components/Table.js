@@ -47,7 +47,6 @@ function isWeek(date) {
 const Table = (props) => {
     //let data = Fetch()
     let data = testData
-    console.log(props.zakres == "week" && isWeek(new Date("2024-09-28")))
     return (
         <div className='tableBox'>
             <p>{props.zakres}</p>

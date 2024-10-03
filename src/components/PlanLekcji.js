@@ -25,20 +25,15 @@ const PlanLekcji = () => {
         }
     }
     return (
-        <><label class="toggler-wrapper style-13">
-            <input type="checkbox" /*checked={gr === 'gr1' ? false : true} onChange={toggleGr}*/ />
-            <div class="toggler-slider">
-                <div class="toggler-knob"></div>
-            </div>
-        </label>
-            <label class="toggler-wrapper style-15">
+        <details class="plan_lekcji">
+      <summary>PLAN LEKCJI</summary>
+            <label className="toggler-wrapper style-15">
                 <input type="checkbox" checked={gr  === 'gr1' ? false : true} onChange={toggleGr} />
-                <div class="toggler-slider">
-                    <div class="toggler-knob"></div>
+                <div className="toggler-slider">
+                    <div className="toggler-knob"></div>
                 </div>
             </label>
             <br />
-            <p>{gr}</p>
             <div className='tableBox'>
                 <table>
                     <thead>
@@ -77,7 +72,8 @@ const PlanLekcji = () => {
                         })}
                     </tbody>
                 </table>
-            </div></>
+            </div>
+            </details>
     );
 }
 

@@ -25,6 +25,7 @@ function App() {
       <Form />
       <br></br>
       <PlanLekcji />
+      <br></br>
       <div className='buttons'>
         <button className={screen == "today" ? "btnActive" : ""} onClick={() => setScreen("today")}>Na dzisiaj / jutro</button>
         <button className={screen == "week" ? "btnActive" : ""} onClick={() => setScreen("week")}>Na ten tydzień</button>
