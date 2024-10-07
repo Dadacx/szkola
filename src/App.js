@@ -27,9 +27,9 @@ function App() {
       <PlanLekcji />
       <br></br>
       <div className='buttons'>
-        <button className={screen == "today" ? "btnActive" : ""} onClick={() => setScreen("today")}>Na dzisiaj / jutro</button>
-        <button className={screen == "week" ? "btnActive" : ""} onClick={() => setScreen("week")}>Na ten tydzień</button>
-        <button className={screen == "all" ? "btnActive" : ""} onClick={() => setScreen("all")}>Wszystko</button>
+        <button className={screen == "today" ? "btnActive btn" : "btn"} onClick={() => setScreen("today")}>Na dzisiaj / jutro</button>
+        <button className={screen == "week" ? "btnActive btn" : "btn"} onClick={() => setScreen("week")}>Na ten tydzień</button>
+        <button className={screen == "all" ? "btnActive btn" : "btn"} onClick={() => setScreen("all")}>Wszystko</button>
       </div>
       {component}
     </div>

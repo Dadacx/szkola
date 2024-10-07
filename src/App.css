@@ -1,35 +1,54 @@
 .App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 table {
-  border-collapse: collapse;
-  width: 90%;
+	border-collapse: collapse;
+	width: 90%;
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-  border: black solid 1px;
+th,
+td {
+	text-align: left;
+	padding: 8px;
+	border: black solid 1px;
+	background-color: white;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+/*tr:nth-child(even) {
+	background-color: #f2f2f2
+}*/
 
 th {
-  background-color: #04AA6D;
-  color: white;
+	background-color: #04AA6D;
+	color: white;
 }
+
 .tableBox {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15px;
+}
+.buttons {
+	width: 100%;
+}
+.btn {
+	background-color: #79c3ff;
+	border: none;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 15px;
+	width: 10%;
+	cursor: pointer;
 }
 .btnActive {
-  background-color: red;
+	border: 3px solid red;
 }
 .toggler-wrapper {
 	display: block;
@@ -69,8 +88,7 @@ th {
 
 .toggler-wrapper.style-15 {
 	zoom: 1.5;
-	width: 84%;
-    margin: auto;
+	margin: auto;
 }
 
 .toggler-wrapper.style-15 input[type="checkbox"]:checked+.toggler-slider:before {
@@ -118,9 +136,45 @@ th {
 	top: 3px;
 	background-color: #fff;
 }
+
 .plan_lekcji {
-	width: 100%;
+	width: 90%;
+	padding: 10px;
+}
+div.details {
+	padding: 20px;
+	background-color: #79c3ff;
+	border-radius: 5px;
+}
+div.details > div {
+	background-color: #008eff;
+	border-radius: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 summary {
+	display: flex;
 	cursor: pointer;
+	user-select: none;
+	font-size: 20px;
+	margin: auto;
+	width: max-content;
+	list-style: none;
+	background-color: #79c3ff;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+details[open] summary {
+	border-radius: 5px 5px 0 0;
+}
+
+summary::after {
+	margin-left: 5px;
+	content: "\25BC";
+	transition: 0.5s;
+}
+
+details[open]>summary::after {
+	transform: rotate(180deg);
 }
