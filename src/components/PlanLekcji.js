@@ -1,3 +1,4 @@
+import '../styles/PlanLekcji.css'
 import plan_lekcji from '../PlanLekcji.json';
 import SetName from './SetName';
 import { useState } from 'react';

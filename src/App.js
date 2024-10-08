@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import Form from "./components/Form"
 import { useState } from 'react';
 import Table from './components/Table';

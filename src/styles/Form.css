@@ -1,0 +1,22 @@
+/*@import url('https://unpkg.com/nice-forms.css');
+
+.nice-form-group>input[type=checkbox], .nice-form-group>input[type=date], .nice-form-group>input[type=email], .nice-form-group>input[type=month], .nice-form-group>input[type=number], .nice-form-group>input[type=password], .nice-form-group>input[type=radio], .nice-form-group>input[type=search], .nice-form-group>input[type=tel], .nice-form-group>input[type=text], .nice-form-group>input[type=time], .nice-form-group>input[type=url], .nice-form-group>input[type=week], .nice-form-group>select, .nice-form-group>textarea {
+    height: unset;
+}*/
+.nice-form-group {
+    /* width: 100%; */
+}
+.nice-form-group input, .nice-form-group select {
+    width: 100%;
+	box-sizing: border-box;
+    /* clear: both;  */
+    /* position: sticky; */
+}
+/*select, input {
+	border: none;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 15px;
+	width: 10%;
+}*/
