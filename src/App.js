@@ -7,16 +7,16 @@ import Buttons from './components/Buttons'
 
 function App() {
   const [screen, setScreen] = useState("today");
-  var component
+  var table
   switch (screen) {
     case "today":
-      component = <Table zakres="today" />
+      table = <Table zakres="today" />
       break;
     case "week":
-      component = <Table zakres="week" />
+      table = <Table zakres="week" />
       break;
     case "all":
-      component = <Table zakres="all" />
+      table = <Table zakres="all" />
       break;
     default:
       break;
@@ -27,7 +27,7 @@ function App() {
       <PlanLekcji />
       <br></br>
       <Buttons screen={screen} setScreen={setScreen} />
-      {component}
+      {table}
     </div>
   );
 }
