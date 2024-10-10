@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/szkola/static/css/main.737f83cd.css",
-    "main.js": "/szkola/static/js/main.acd34fae.js",
+    "main.css": "/szkola/static/css/main.a1975007.css",
+    "main.js": "/szkola/static/js/main.1804f6d5.js",
     "static/js/453.00e538aa.chunk.js": "/szkola/static/js/453.00e538aa.chunk.js",
     "index.html": "/szkola/index.html",
-    "main.737f83cd.css.map": "/szkola/static/css/main.737f83cd.css.map",
-    "main.acd34fae.js.map": "/szkola/static/js/main.acd34fae.js.map",
+    "static/media/opis.svg": "/szkola/static/media/opis.b8c94bf7b4053b4acaea.svg",
+    "static/media/password_hide.svg": "/szkola/static/media/password_hide.84dc3273f6fce3a16976c4bf567e4d61.svg",
+    "static/media/grupa.svg": "/szkola/static/media/grupa.e1f5df1820ae1060a9e5.svg",
+    "static/media/typ.svg": "/szkola/static/media/typ.b6d1a1b42af3bda92a04.svg",
+    "static/media/przedmiot.svg": "/szkola/static/media/przedmiot.3c1516695798a034db63.svg",
+    "static/media/password_show.svg": "/szkola/static/media/password_show.2de7511ce8d3594e3543d6698a877fea.svg",
+    "static/media/password_icon.svg": "/szkola/static/media/password_icon.ae697e2e0d19c40e9f10.svg",
+    "main.a1975007.css.map": "/szkola/static/css/main.a1975007.css.map",
+    "main.1804f6d5.js.map": "/szkola/static/js/main.1804f6d5.js.map",
     "453.00e538aa.chunk.js.map": "/szkola/static/js/453.00e538aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.737f83cd.css",
-    "static/js/main.acd34fae.js"
+    "static/css/main.a1975007.css",
+    "static/js/main.1804f6d5.js"
   ]
 }
