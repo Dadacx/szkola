@@ -1,22 +1,92 @@
-/*@import url('https://unpkg.com/nice-forms.css');
-
-.nice-form-group>input[type=checkbox], .nice-form-group>input[type=date], .nice-form-group>input[type=email], .nice-form-group>input[type=month], .nice-form-group>input[type=number], .nice-form-group>input[type=password], .nice-form-group>input[type=radio], .nice-form-group>input[type=search], .nice-form-group>input[type=tel], .nice-form-group>input[type=text], .nice-form-group>input[type=time], .nice-form-group>input[type=url], .nice-form-group>input[type=week], .nice-form-group>select, .nice-form-group>textarea {
-    height: unset;
-}*/
-.nice-form-group {
-    /* width: 100%; */
+@import url('https://unpkg.com/nice-forms.css');
+.dodaj {
+    width: 60%;
+    --input-width: 85%;
 }
-.nice-form-group input, .nice-form-group select {
-    width: 100%;
+.nice-form-group > input, .nice-form-group > select, .nice-form-group > textarea {
+    width: var(--input-width);
 	box-sizing: border-box;
-    /* clear: both;  */
-    /* position: sticky; */
 }
-/*select, input {
-	border: none;
-	margin: 5px;
-	padding: 10px;
-	border-radius: 5px;
-	font-size: 15px;
-	width: 10%;
-}*/
+.nice-form-group > select {
+    background-position: left var(--icon-background-offset) bottom 50%, right var(--icon-background-offset) bottom 50%;
+    padding-left: var(--icon-padding);
+}
+.nice-form-group > select.grupa {
+    background-image: url('../images/grupa.svg'), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+.nice-form-group > select.przedmiot {
+    background-image: url('../images/przedmiot.svg'), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+.nice-form-group > select.typ {
+    background-image: url('../images/typ.svg'), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+}
+.nice-form-group > input[type='text'].password {
+    background-image: url('../images/password_icon.svg');
+    background-repeat: no-repeat;
+}
+.nice-form-group > textarea.opis {
+    background-image: url('../images/opis.svg');
+    background-position: left var(--icon-background-offset) bottom 50%;
+    background-repeat: no-repeat;
+    padding-left: var(--icon-padding);
+    background-size: var(--nf-input-size);
+    resize: vertical;
+}
+.nice-form-group > input[type=date] {
+	width: var(--input-width);
+	background-position: left var(--icon-background-offset) bottom 50%;
+    padding-left: var(--icon-padding);
+    background-size: var(--nf-input-size);
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background-repeat:  no-repeat;
+    width: 25px;
+    height: 25px;
+    border-width: thin
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+	margin-left: calc(var(--icon-padding)*(-1));
+}
+.nice-form-group > input.password {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: inline-block;
+    height: calc(var(--nf-input-size) * 2.75); /* Wysokość dopasowana do przycisku */
+    box-sizing: border-box;
+    vertical-align: top; /* Wyrównanie inputu */
+    width: calc(var(--input-width) - 2.87rem)
+}
+
+/* Stylizacja dla przycisku do pokazywania/ukrywania hasła */
+.input-group-append {
+    display: inline-block;
+    height: calc(var(--nf-input-size) * 2.75); /* Dopasowanie wysokości do inputu */
+    vertical-align: top; /* Wyrównanie w pionie */
+}
+
+/* Stylizacja przycisku */
+.input-group-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .375rem .75rem;
+    background-color: #e9ecef;
+    border: 1px solid #c0c4c9;
+    border-bottom: var(--nf-input-border-bottom-width) var(--nf-input-border-style) var(--nf-input-border-color);
+    border-radius: .375rem;
+    height: calc(var(--nf-input-size) * 2.75); /* Ustawienie wysokości takiej samej jak input */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.password_hide {
+    display: none;
+}
+.password_show {
+    display: block;
+}

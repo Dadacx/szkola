@@ -87,42 +87,4 @@
 
 .plan_lekcji {
 	width: 90%;
-	padding: 10px;
-}
-div.details {
-	padding: 20px;
-	background-color: #a99985;
-	border-radius: 5px;
-}
-div.details > div {
-	background-color: #dad2bc;
-	border-radius: 5px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-summary {
-	display: flex;
-	cursor: pointer;
-	user-select: none;
-	font-size: 20px;
-	margin: auto;
-	width: max-content;
-	list-style: none;
-	background-color: #a99985;
-	border-radius: 5px;
-	padding: 10px;
-}
-
-details[open] summary {
-	border-radius: 5px 5px 0 0;
-}
-
-summary::after {
-	margin-left: 5px;
-	content: "\25BC";
-	transition: 0.5s;
-}
-
-details[open]>summary::after {
-	transform: rotate(180deg);
 }

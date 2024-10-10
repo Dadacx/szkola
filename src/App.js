@@ -3,6 +3,7 @@ import Form from "./components/Form"
 import { useState } from 'react';
 import Table from './components/Table';
 import PlanLekcji from './components/PlanLekcji';
+import Buttons from './components/Buttons'
 
 function App() {
   const [screen, setScreen] = useState("today");
@@ -23,14 +24,9 @@ function App() {
   return (
     <div className="App">
       <Form />
-      <br></br>
       <PlanLekcji />
       <br></br>
-      <div className='buttons'>
-        <button className={screen == "today" ? "btnActive btn" : "btn"} onClick={() => setScreen("today")}>Na dzisiaj / jutro</button>
-        <button className={screen == "week" ? "btnActive btn" : "btn"} onClick={() => setScreen("week")}>Na ten tydzień</button>
-        <button className={screen == "all" ? "btnActive btn" : "btn"} onClick={() => setScreen("all")}>Wszystko</button>
-      </div>
+      <Buttons screen={screen} setScreen={setScreen} />
       {component}
     </div>
   );

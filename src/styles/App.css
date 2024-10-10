@@ -4,12 +4,10 @@
 	flex-direction: column;
 	align-items: center;
 }
-
 table {
 	border-collapse: collapse;
 	width: 90%;
 }
-
 th,
 td {
 	text-align: left;
@@ -17,16 +15,10 @@ td {
 	border: black solid 1px;
 	background-color: white;
 }
-
-/*tr:nth-child(even) {
-	background-color: #f2f2f2
-}*/
-
 th {
 	background-color: #70798c;
 	color: white;
 }
-
 .tableBox {
 	width: 100%;
 	display: flex;
@@ -44,9 +36,50 @@ th {
 	padding: 10px;
 	border-radius: 5px;
 	font-size: 15px;
-	width: 10%;
-	cursor: pointer;
+    width: 13%;
+    cursor: pointer;
+    min-width: fit-content;
 }
 .btnActive {
 	border: 3px solid #252323;
+}
+details {
+	padding: 10px;
+}
+div.details {
+	padding: 20px;
+	background-color: #a99985;
+	border-radius: 5px;
+}
+div.details > div {
+	background-color: #dad2bc;
+	border-radius: 5px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+summary {
+	display: flex;
+	cursor: pointer;
+	user-select: none;
+	font-size: 20px;
+	margin: auto;
+	width: max-content;
+	list-style: none;
+	background-color: #a99985;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+details[open] summary {
+	border-radius: 5px 5px 0 0;
+}
+
+summary::after {
+	margin-left: 5px;
+	content: "\25BC";
+	transition: 0.5s;
+}
+
+details[open]>summary::after {
+	transform: rotate(180deg);
 }
