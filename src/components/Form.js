@@ -21,7 +21,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const bodyString = `haslo=${haslo}&grupa=${grupa}&przedmiot=${przedmiot}&typ=${typ}&data=${data}&opis=${opis}`
+    const bodyString = `haslo=${haslo}\n&grupa=${grupa}&przedmiot=${przedmiot}&typ=${typ}&data=${data}&opis=${opis}`
     console.log(bodyString)
     fetch('http://frog01.mikr.us:21339', {
       method: 'POST',
