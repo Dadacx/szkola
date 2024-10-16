@@ -23,6 +23,7 @@
 .nice-form-group > input[type='text'].password {
     background-image: url('../images/password_icon.svg');
     background-repeat: no-repeat;
+    letter-spacing: 1px;
 }
 .nice-form-group > textarea.opis {
     background-image: url('../images/opis.svg');

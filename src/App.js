@@ -4,9 +4,12 @@ import { useState } from 'react';
 import Table from './components/Table';
 import PlanLekcji from './components/PlanLekcji';
 import Buttons from './components/Buttons'
+import ThemeSwitch from './components/ThemeSwitch';
 
 function App() {
   const [screen, setScreen] = useState("today");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
+  document.querySelector("body").setAttribute("data-theme", theme)
   var table
   switch (screen) {
     case "today":
@@ -23,6 +26,7 @@ function App() {
   }
   return (
     <div className="App">
+      <ThemeSwitch theme={theme} setTheme={setTheme} />
       <Form />
       <PlanLekcji />
       <br></br>
