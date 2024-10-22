@@ -2,12 +2,22 @@
 	--text-color: black;
 	--background: white;
 	--btn-active-border: #252323;
+	--btns-background: #a99985;
+	--details-background: #dad2bc;
 }
 [data-theme="dark"] {
 	--text-color: white;
 	--background: rgb(52, 52, 52);
 	--btn-active-border: white;
+	--btns-background: #554c42;
+	--details-background: #6d695e;
 }
+[data-theme="dark"] .nice-form-group  {
+	--nf-input-color: var(--text-color);
+	--nf-label-color: var(--text-color);
+	--nf-input-background-color: rgb(77 77 77);
+	--nf-valid-input-border-color: rgb(123 123 123);
+  }
 body {
 	background: var(--background);
 	color: var(--text-color);
@@ -44,7 +54,7 @@ th {
 	width: 100%;
 }
 .btn {
-	background-color: #a99985;
+	background-color: var(--btns-background);
 	border: none;
 	margin: 5px;
 	padding: 10px;
@@ -63,11 +73,11 @@ details {
 }
 div.details {
 	padding: 20px;
-	background-color: #a99985;
+	background-color: var(--btns-background);
 	border-radius: 5px;
 }
 div.details > div {
-	background-color: #dad2bc;
+	background-color: var(--details-background);
 	border-radius: 5px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -80,7 +90,7 @@ summary {
 	margin: auto;
 	width: max-content;
 	list-style: none;
-	background-color: #a99985;
+	background-color: var(--btns-background);
 	border-radius: 5px;
 	padding: 10px;
 }

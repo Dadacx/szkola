@@ -33,53 +33,54 @@ function isWeek(date) {
     const todayDate = todayObj.getDate();
     const todayDay = todayObj.getDay();
 
-    // get first date of week
     const firstDayOfWeek = new Date(todayObj.setDate(todayDate - todayDay));
 
-    // get last date of week
     const lastDayOfWeek = new Date(firstDayOfWeek);
     lastDayOfWeek.setDate(lastDayOfWeek.getDate() + 8);
 
-    // if date is equal or within the first and last dates of the week
     return date >= firstDayOfWeek && date <= lastDayOfWeek;
 }
 const Table = (props) => {
-    let data = Fetch()
-    //let data = testData
+    var data = Fetch()
+    // let data = testData
     const filteredData = data.filter(data => {
         if (props.zakres === "today" && isToday(data.data)) return true;
         if (props.zakres === "week" && isWeek(new Date(data.data))) return true;
         if (props.zakres === "all") return true;
         return false;
-    });
+    })
+    const isError = data[0] && data[0].grupa === 'error';
     return (
         <div className='tableBox'>
             <table className='table'>
                 <tbody>
                     <tr><th>Grupa</th><th>Przedmiot</th><th>Typ</th><th>Opis</th><th>Data</th></tr>
+                    {isError ? (
+                        <tr>
+                            <td colSpan="5" style={{ textAlign: 'center', color: 'red' }}>ERROR: {data[0].opis}</td>
+                        </tr>
+                    ) : null}
                     {filteredData.length > 0 ? (
                         filteredData.map((dataItem, index) => (
-                            <tr key={index}>
-                                <td>{SetName("grupy", dataItem.grupa)}</td>
-                                <td>{SetName("przedmioty", dataItem.przedmiot)}</td>
-                                <td>{SetName("typ", dataItem.typ)}</td>
-                                <td>{dataItem.opis}</td>
-                                <td>{date_format(dataItem.data)}</td>
-                            </tr>
+                            !(isError && index === 0) && (
+                                <tr key={index}>
+                                    <td>{SetName("grupy", dataItem.grupa)}</td>
+                                    <td>{SetName("przedmioty", dataItem.przedmiot)}</td>
+                                    <td>{SetName("typ", dataItem.typ)}</td>
+                                    <td>{dataItem.opis}</td>
+                                    <td>{date_format(dataItem.data)}</td>
+                                </tr>
+                            )
                         ))
                     ) : (
                         <tr>
                             <td colSpan="5" style={{ textAlign: 'center' }}>Nie ma nic do nauki w tym okresie</td>
                         </tr>
-                    )}
+                    )
+                }
                 </tbody>
             </table>
         </div>
-
-        /*<table>
-        <tr><th>Grupa</th><th>Przedmiot</th><th>Typ</th><th>Opis</th><th>Data</th></tr>
-        {data.map(data => <tr><td>{config.grupy.find(x => data.grupa == x.id).nazwa}</td><td>{config.przedmioty.find(x => data.przedmiot == x.id).nazwa}</td><td>{config.typ.find(x => data.typ == x.id).nazwa}</td><td>{data.opis}</td><td>{data.data}</td></tr>)}
-        </table>*/
     );
 };
 export default Table;

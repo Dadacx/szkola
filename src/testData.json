@@ -1,10 +1,10 @@
 [
     {
-        "grupa":"obie",
+        "grupa":"error",
         "przedmiot":"historia",
         "typ":"sprawdzian",
         "data":"2024-10-01",
-        "opis":"Jakiś opis historii"
+        "opis":"ERROR"
     },
     {
         "grupa":"gr1",

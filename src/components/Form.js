@@ -21,7 +21,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const bodyString = `haslo=${haslo}\n&grupa=${grupa}&przedmiot=${przedmiot}&typ=${typ}&data=${data}&opis=${opis}`
+    const bodyString = `${haslo}\n&grupa=${grupa}&przedmiot=${przedmiot}&typ=${typ}&data=${data}&opis=${opis}`
     console.log(bodyString)
     fetch('http://frog01.mikr.us:21339', {
       method: 'POST',
@@ -88,8 +88,8 @@ const Form = () => {
                   className='icon-left password'
                   required
                 />
-                <div class="input-group-append">
-                  <span class="input-group-text" onClick={() => setShowPassword(e => !e)}>
+                <div className="input-group-append">
+                  <span className="input-group-text" onClick={() => setShowPassword(e => !e)}>
                     <img width={20} height={20} src={password_hide} className={showPassword ? 'password_hide' : 'password_show'}></img>
                     <img width={20} height={20} src={password_show} className={showPassword ? 'password_show' : 'password_hide'}></img>
                   </span>
