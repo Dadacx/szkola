@@ -17,6 +17,7 @@
 	--nf-label-color: var(--text-color);
 	--nf-input-background-color: rgb(77 77 77);
 	--nf-valid-input-border-color: rgb(123 123 123);
+	--nf-input-border-style: rgb(123 123 123);
   }
 body {
 	background: var(--background);
@@ -49,24 +50,6 @@ th {
 	flex-direction: column;
 	align-items: center;
 	margin-top: 15px;
-}
-.buttons {
-	width: 100%;
-}
-.btn {
-	background-color: var(--btns-background);
-	border: none;
-	margin: 5px;
-	padding: 10px;
-	border-radius: 5px;
-	font-size: 15px;
-    width: 13%;
-    cursor: pointer;
-    min-width: fit-content;
-	color: var(--text-color);
-}
-.btnActive {
-	border: 3px solid var(--btn-active-border);
 }
 details {
 	padding: 10px;

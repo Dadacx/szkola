@@ -72,7 +72,7 @@ const Table = (props) => {
                                 </tr>
                             )
                         ))
-                    ) : (
+                    ) : (!isError) && (
                         <tr>
                             <td colSpan="5" style={{ textAlign: 'center' }}>Nie ma nic do nauki w tym okresie</td>
                         </tr>

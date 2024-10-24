@@ -3,7 +3,6 @@ import '../styles/ThemeSwitch.css'
 const ThemeSwitch = (props) => {
   const change_theme = (e) => {
     if(e.target.checked == false) {
-      console.log("fds")
       props.setTheme("dark")
       document.querySelector("body").setAttribute("data-theme","dark")
       localStorage.setItem("theme","dark")

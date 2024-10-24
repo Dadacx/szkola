@@ -75,9 +75,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     justify-content: center;
     padding: .375rem .75rem;
-    background-color: #e9ecef;
-    border: 1px solid #c0c4c9;
-    border-bottom: var(--nf-input-border-bottom-width) var(--nf-input-border-style) var(--nf-input-border-color);
+    background-color: var(--nf-input-background-color);
+    border: 1px solid var(--nf-valid-input-border-color);
+    border-bottom: var(--nf-input-border-bottom-width) var(--nf-input-border-style) var(--nf-valid-input-border-color);
     border-radius: .375rem;
     height: calc(var(--nf-input-size) * 2.75); /* Ustawienie wysokości takiej samej jak input */
     border-top-left-radius: 0;
