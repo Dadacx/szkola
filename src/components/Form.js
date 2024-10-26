@@ -21,13 +21,13 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const bodyString = `${haslo}\n&grupa=${grupa}&przedmiot=${przedmiot}&typ=${typ}&data=${data}&opis=${opis}`
+    const bodyString = `${haslo}\ngrupa=${grupa}&przedmiot=${przedmiot}&typ=${typ}&data=${data}&opis=${opis}`
     console.log(bodyString)
     fetch('http://frog01.mikr.us:21339', {
       method: 'POST',
       body: bodyString
-    }).then(response => console.log('Success:', response.json()))
-      .then(result => console.log('Success:', result))
+    }).then(response => console.log('Success:', response.text()))
+      // .then(result => console.log('Success:', result))
       .catch(error => console.error('Error:', error));
     //window.location.reload()
   };

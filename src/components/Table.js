@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Fetch from './Fetch';
 import testData from '../testData.json'
 import SetName from './SetName';
-import '../styles/Table.css'
 import { SortAsc, SortDesc, Sortable } from './SortIndicators';
 
 function date_format(date) {
@@ -82,21 +81,23 @@ const Table = ({ zakres }) => {
         setSortMethod(newSortMethod);
         setLastSortedColumn(column);
 
+        const error = sortedData[0].grupa === 'error' ? sortedData.splice(0,1) : null
         sortedData.sort((a, b) => {
             const aValue = a[column];
             const bValue = b[column];
             return newSortMethod === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
         });
+        if(error !== null) sortedData.unshift(error[0])
         setData(sortedData);
     };
 
     const getSortIndicator = (column) => {
         if (lastSortedColumn === column) {
             return sortMethod === 'asc' 
-            ? <SortAsc width='16' height='16' color="white" /> 
-            : <SortDesc width='16' height='16' color="white" /> 
+            ? <SortAsc width='16' height='16' color="white" onClick={() => sortTable(column)} /> 
+            : <SortDesc width='16' height='16' color="white" onClick={() => sortTable(column)} /> 
         }
-        return <Sortable width='16' height='16' color="white" /> ;
+        return <Sortable width='16' height='16' color="white" onClick={() => sortTable(column)} /> ;
     };
 
     const filteredData = data.filter(data => {
@@ -111,16 +112,16 @@ const Table = ({ zakres }) => {
     
     return (
         <div className='tableBox'>
-            <table className='table sortable' id='table'>
+            <table className='table' id='table'>
                 <tbody>
-                    <tr><th onClick={() => sortTable('grupa')}>Grupa {getSortIndicator('grupa')}</th>
-                    <th onClick={() => sortTable('przedmiot')}>Przedmiot {getSortIndicator('przedmiot')}</th>
-                    <th onClick={() => sortTable('typ')}>Typ {getSortIndicator('typ')}</th>
+                    <tr><th>Grupa {getSortIndicator('grupa')}</th>
+                    <th>Przedmiot {getSortIndicator('przedmiot')}</th>
+                    <th>Typ {getSortIndicator('typ')}</th>
                     <th>Opis</th>
-                    <th onClick={() => sortTable('data')}>Data {getSortIndicator('data')}</th></tr>
+                    <th>Data {getSortIndicator('data')}</th></tr>
                     {isError ? (
                         <tr>
-                            <td colSpan="5" style={{ textAlign: 'center', color: 'red' }}>ERROR: {data[0].opis}</td>
+                            <td colSpan="5" style={{ textAlign: 'center', color: 'red' }}>{data[0].opis}</td>
                         </tr>
                     ) : null}
                     {filteredData.length > 0 ? (

@@ -1,9 +1,10 @@
 const SortAsc = (props) => {
     return (
         <svg
+        onClick={props.onClick}
         width={props.width}
         height={props.height}
-        style={{ color: props.color }}
+        style={{ color: props.color, cursor: 'pointer' }}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -14,9 +15,11 @@ const SortAsc = (props) => {
 }
 const SortDesc = (props) => {
     return (
-        <svg width={props.width}
+        <svg 
+        onClick={props.onClick}
+        width={props.width}
         height={props.height}
-        style={{ color: props.color }}
+        style={{ color: props.color, cursor: 'pointer' }}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -27,9 +30,11 @@ const SortDesc = (props) => {
 }
 const Sortable = (props) => {
     return (
-        <svg width={props.width}
+        <svg 
+        onClick={props.onClick}
+        width={props.width}
         height={props.height}
-        style={{ color: props.color }}
+        style={{ color: props.color, cursor: 'pointer' }}
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
