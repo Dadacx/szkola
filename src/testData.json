@@ -1,44 +1,121 @@
 [
     {
-        "grupa":"error",
-        "przedmiot":"historia",
-        "typ":"sprawdzian",
-        "data":"2024-10-01",
-        "opis":"testowy error"
+        "grupa": "obie",
+        "przedmiot": "j_polski",
+        "typ": "sprawdzian",
+        "data": "2024-10-16",
+        "opis": "z bazy"
     },
     {
-        "grupa":"gr1",
-        "przedmiot":"j_ang",
-        "typ":"kartkowka",
-        "data":"2024-10-11",
-        "opis":"Jakiś opis angielskiego"
+        "grupa": "gr1",
+        "przedmiot": "j_ang",
+        "typ": "kartkowka",
+        "data": "2024-10-16",
+        "opis": "z bazy"
     },
     {
-        "grupa":"gr2",
-        "przedmiot":"j_niemiecki",
-        "typ":"pytanie",
-        "data":"2024-11-01",
-        "opis":"Jakiś opis niemieckiego"
+        "grupa": "gr2",
+        "przedmiot": "j_niemiecki",
+        "typ": "sprawdzian",
+        "data": "2024-10-10",
+        "opis": "z bazy"
     },
     {
-        "grupa":"gr2",
-        "przedmiot":"j_rosyjski",
-        "typ":"zadanie",
-        "data":"2024-09-25",
-        "opis":"Jakiś opis rosyjskiego"
+        "grupa": "obie",
+        "przedmiot": "historia",
+        "typ": "zadanie",
+        "data": "2024-10-11",
+        "opis": "z bazy"
     },
     {
-        "grupa":"obie",
-        "przedmiot":"matematyka",
-        "typ":"zadanie",
-        "data":"2024-09-27",
-        "opis":"Jakiś opis matematyki"
+        "grupa": "gr1",
+        "przedmiot": "j_niemiecki",
+        "typ": "kartkowka",
+        "data": "2024-10-14",
+        "opis": "z bazy"
     },
     {
-        "grupa":"obie",
-        "przedmiot":"wos",
-        "typ":"sprawdzian",
-        "data":"2024-09-30",
-        "opis":"Jakiś opis wosu"
+        "grupa": "gr1",
+        "przedmiot": "j_niemiecki",
+        "typ": "pytanie",
+        "data": "2024-10-16",
+        "opis": "z bazy"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "historia",
+        "typ": "sprawdzian",
+        "data": "2024-10-11",
+        "opis": "z bazy"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "j_polski",
+        "typ": "sprawdzian",
+        "data": "2024-10-26",
+        "opis": "bo czemu nie (z bazy)"
+    },
+    {
+        "grupa": "gr1",
+        "przedmiot": "j_ang",
+        "typ": "kartkowka",
+        "data": "2024-10-30",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "j_polski",
+        "typ": "sprawdzian",
+        "data": "2024-10-29",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "matematyka",
+        "typ": "kartkowka",
+        "data": "2024-10-30",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "matematyka",
+        "typ": "kartkowka",
+        "data": "2024-10-31",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "matematyka",
+        "typ": "kartkowka",
+        "data": "2024-11-06",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "matematyka",
+        "typ": "sprawdzian",
+        "data": "2024-11-07",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "matematyka",
+        "typ": "sprawdzian",
+        "data": "2024-11-13",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "j_polski",
+        "typ": "zadanie",
+        "data": "2024-10-28",
+        "opis": "Z VULCANA"
+    },
+    {
+        "grupa": "obie",
+        "przedmiot": "j_polski",
+        "typ": "zadanie",
+        "data": "2024-10-29",
+        "opis": "Z VULCANA"
     }
 ]

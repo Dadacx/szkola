@@ -17,7 +17,6 @@
 	--nf-label-color: var(--text-color);
 	--nf-input-background-color: rgb(77 77 77);
 	--nf-valid-input-border-color: rgb(123 123 123);
-	--nf-input-border-style: rgb(123 123 123);
   }
 body {
 	background: var(--background);

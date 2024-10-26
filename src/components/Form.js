@@ -6,18 +6,18 @@ import password_show from '../images/password_show.svg'
 
 const Form = () => {
   const [showPassword, setShowPassword] = useState(false)
-  const [value, setValue] = useState('')
-  var day = new Date(value).getUTCDay();
-  if ([6, 0].includes(day)) {
-    setValue('')
-    alert('Nie możesz wybrać weekendu!');
-  }
   const [grupa, setGrupa] = useState('');
   const [przedmiot, setPrzedmiot] = useState('');
   const [typ, setTyp] = useState('');
   const [data, setData] = useState('');
   const [opis, setOpis] = useState('');
   const [haslo, setHaslo] = useState('');
+
+  var day = new Date(data).getUTCDay();
+  if ([6, 0].includes(day)) {
+    setData('')
+    alert('Nie możesz wybrać weekendu!');
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();

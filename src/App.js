@@ -12,6 +12,9 @@ function App() {
   document.querySelector("body").setAttribute("data-theme", theme)
   var table
   switch (screen) {
+    case "past":
+      table = <Table zakres="past" />
+      break;
     case "today":
       table = <Table zakres="today" />
       break;

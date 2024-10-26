@@ -1,6 +1,10 @@
+import { useState, useEffect } from 'react';
 import Fetch from './Fetch';
 import testData from '../testData.json'
 import SetName from './SetName';
+import '../styles/Table.css'
+import { SortAsc, SortDesc, Sortable } from './SortIndicators';
+
 function date_format(date) {
     const data = new Date(date)
 
@@ -16,6 +20,14 @@ function date_format(date) {
         month = "0" + month;
     return `${days[week_day]}, ${day}.${month}.${year}`
 }
+function isPast(date) {
+    const aktualna_data = new Date()
+    const data = new Date(date)
+    if ((data.getTime() - aktualna_data.getTime()) < 0 && data.getDate() != aktualna_data.getDate()) {
+        return true
+    }
+    return false
+}
 function isToday(date) {
     const aktualna_data = new Date()
     const data = new Date(date)
@@ -29,32 +41,83 @@ function isToday(date) {
     return false
 }
 function isWeek(date) {
-    const todayObj = new Date();
-    const todayDate = todayObj.getDate();
-    const todayDay = todayObj.getDay();
+    const today = new Date()
+    const next7Days = new Date()
+    next7Days.setDate(next7Days.getDate() + 7)
 
-    const firstDayOfWeek = new Date(todayObj.setDate(todayDate - todayDay));
-
-    const lastDayOfWeek = new Date(firstDayOfWeek);
-    lastDayOfWeek.setDate(lastDayOfWeek.getDate() + 8);
-
-    return date >= firstDayOfWeek && date <= lastDayOfWeek;
+    return date >= today && date <= next7Days;
 }
-const Table = (props) => {
-    var data = Fetch()
-    // let data = testData
+function getSchoolYear() {
+    const date = new Date()
+    if ((date.getMonth() + 1) >= 9) return date.getFullYear()
+    else return date.getFullYear() - 1
+}
+const Table = ({ zakres }) => {
+    const [data, setData] = useState([]);
+    const [sortMethod, setSortMethod] = useState('asc');
+    const [lastSortedColumn, setLastSortedColumn] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const dataOd = zakres === 'past' 
+                ? new Date(getSchoolYear() + '-09-01').toISOString() 
+                : new Date().toISOString();
+            const dataDo = new Date();
+            if (zakres !== 'past') dataDo.setMonth(dataDo.getMonth() + 2);
+            const dataDoString = dataDo.toISOString();
+
+            const fetchedData = await Fetch(dataOd, dataDoString);
+            fetchedData.sort((a, b) => new Date(a.data) - new Date(b.data))
+            setData(fetchedData);
+        };
+        fetchData();
+        setLastSortedColumn('data')
+    }, [zakres]);
+
+    const sortTable = (column) => {
+        const sortedData = [...data];
+        const isSameColumn = lastSortedColumn === column;
+        
+        const newSortMethod = isSameColumn && sortMethod === 'asc' ? 'desc' : 'asc';
+        setSortMethod(newSortMethod);
+        setLastSortedColumn(column);
+
+        sortedData.sort((a, b) => {
+            const aValue = a[column];
+            const bValue = b[column];
+            return newSortMethod === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+        });
+        setData(sortedData);
+    };
+
+    const getSortIndicator = (column) => {
+        if (lastSortedColumn === column) {
+            return sortMethod === 'asc' 
+            ? <SortAsc width='16' height='16' color="white" /> 
+            : <SortDesc width='16' height='16' color="white" /> 
+        }
+        return <Sortable width='16' height='16' color="white" /> ;
+    };
+
     const filteredData = data.filter(data => {
-        if (props.zakres === "today" && isToday(data.data)) return true;
-        if (props.zakres === "week" && isWeek(new Date(data.data))) return true;
-        if (props.zakres === "all") return true;
+        if (zakres === "past" && isPast(data.data)) return true;
+        if (zakres === "today" && isToday(data.data)) return true;
+        if (zakres === "week" && isWeek(new Date(data.data))) return true;
+        if (zakres === "all") return true;
         return false;
     })
+
     const isError = data[0] && data[0].grupa === 'error';
+    
     return (
         <div className='tableBox'>
-            <table className='table'>
+            <table className='table sortable' id='table'>
                 <tbody>
-                    <tr><th>Grupa</th><th>Przedmiot</th><th>Typ</th><th>Opis</th><th>Data</th></tr>
+                    <tr><th onClick={() => sortTable('grupa')}>Grupa {getSortIndicator('grupa')}</th>
+                    <th onClick={() => sortTable('przedmiot')}>Przedmiot {getSortIndicator('przedmiot')}</th>
+                    <th onClick={() => sortTable('typ')}>Typ {getSortIndicator('typ')}</th>
+                    <th>Opis</th>
+                    <th onClick={() => sortTable('data')}>Data {getSortIndicator('data')}</th></tr>
                     {isError ? (
                         <tr>
                             <td colSpan="5" style={{ textAlign: 'center', color: 'red' }}>ERROR: {data[0].opis}</td>
@@ -77,7 +140,7 @@ const Table = (props) => {
                             <td colSpan="5" style={{ textAlign: 'center' }}>Nie ma nic do nauki w tym okresie</td>
                         </tr>
                     )
-                }
+                    }
                 </tbody>
             </table>
         </div>

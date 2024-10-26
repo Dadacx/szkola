@@ -17,28 +17,3 @@
 .btnActive {
 	border: 3px solid var(--btn-active-border);
 }
-.range_text {
-	margin-bottom: 10px;
-}
-div.range .nice-form-group > input[type='date'] {
-	width: 140px;
-	min-width: unset;
-}
-div.range {
-	display: flex;
-	align-items: baseline;
-}
-div.range .nice-form-group {
-	margin: 0;
-}
-.minus {
-	margin-left: 10px;
-	margin-right: 10px;
-	font-weight: bold;
-	transform: scaleX(2.5);
-}
-.btn-accept {
-	margin: 0;
-	margin-left: 15px;
-	height: 2.75rem;
-}
