@@ -55,8 +55,10 @@ const Table = ({ zakres }) => {
     const [data, setData] = useState([]);
     const [sortMethod, setSortMethod] = useState('asc');
     const [lastSortedColumn, setLastSortedColumn] = useState(null);
-
+    var useEffectController = 'past'
+    zakres === 'past' ? useEffectController = 'past' : useEffectController = 'present'
     useEffect(() => {
+        console.log('useEffect')
         const fetchData = async () => {
             const dataOd = zakres === 'past' 
                 ? new Date(getSchoolYear() + '-09-01').toISOString() 
@@ -71,7 +73,7 @@ const Table = ({ zakres }) => {
         };
         fetchData();
         setLastSortedColumn('data')
-    }, [zakres]);
+    }, [useEffectController]);
 
     const sortTable = (column) => {
         const sortedData = [...data];
