@@ -23,7 +23,7 @@ const Form = () => {
     e.preventDefault();
     const bodyString = `${haslo}\ngrupa=${grupa}&przedmiot=${przedmiot}&typ=${typ}&data=${data}&opis=${opis}`
     console.log(bodyString)
-    fetch('http://frog01.mikr.us:21339', {
+    fetch('https://frog01-21339.wykr.es/', {
       method: 'POST',
       body: bodyString
     }).then(response => console.log('Success:', response.text()))

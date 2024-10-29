@@ -110,7 +110,7 @@ const Table = ({ zakres }) => {
         return false;
     })
 
-    const isError = data[0] && data[0].grupa === 'error';
+    const isError = data[0] && data[0].typ === 'error';
     
     return (
         <div className='tableBox'>
