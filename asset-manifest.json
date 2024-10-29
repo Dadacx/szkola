@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/szkola/static/css/main.37935221.css",
+    "main.css": "/szkola/static/css/main.99bc9178.css",
     "main.js": "/szkola/static/js/main.87ddeecd.js",
     "static/js/453.00e538aa.chunk.js": "/szkola/static/js/453.00e538aa.chunk.js",
     "static/media/wave.svg": "/szkola/static/media/wave.c802387462435ebf45f43e2d245b7678.svg",
@@ -12,12 +12,12 @@
     "static/media/przedmiot.svg": "/szkola/static/media/przedmiot.3c1516695798a034db63.svg",
     "static/media/password_show.svg": "/szkola/static/media/password_show.2de7511ce8d3594e3543d6698a877fea.svg",
     "static/media/password_icon.svg": "/szkola/static/media/password_icon.ae697e2e0d19c40e9f10.svg",
-    "main.37935221.css.map": "/szkola/static/css/main.37935221.css.map",
+    "main.99bc9178.css.map": "/szkola/static/css/main.99bc9178.css.map",
     "main.87ddeecd.js.map": "/szkola/static/js/main.87ddeecd.js.map",
     "453.00e538aa.chunk.js.map": "/szkola/static/js/453.00e538aa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37935221.css",
+    "static/css/main.99bc9178.css",
     "static/js/main.87ddeecd.js"
   ]
 }
