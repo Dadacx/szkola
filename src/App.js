@@ -5,6 +5,7 @@ import Table from './components/Table';
 import PlanLekcji from './components/PlanLekcji';
 import Buttons from './components/Buttons'
 import ThemeSwitch from './components/ThemeSwitch';
+import wave from './images/wave.svg'
 
 function App() {
   const [screen, setScreen] = useState("today");
@@ -29,6 +30,7 @@ function App() {
   }
   return (
     <div className="App">
+      {/* <img src={wave} /> */}
       <ThemeSwitch theme={theme} setTheme={setTheme} />
       <Form />
       <PlanLekcji />

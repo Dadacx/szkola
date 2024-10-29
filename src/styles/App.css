@@ -19,7 +19,9 @@
 	--nf-valid-input-border-color: rgb(123 123 123);
   }
 body {
-	background: var(--background);
+	background: var(--background) url('../images/wave.svg');
+	background-size: cover;
+    background-attachment: fixed;
 	color: var(--text-color);
 }
 .App {
