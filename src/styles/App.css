@@ -5,6 +5,7 @@
 	--btns-background: #a99985;
 	--details-background: #dad2bc;
 }
+
 [data-theme="dark"] {
 	--text-color: white;
 	--background: rgb(52, 52, 52);
@@ -12,28 +13,34 @@
 	--btns-background: #554c42;
 	--details-background: #6d695e;
 }
-[data-theme="dark"] .nice-form-group  {
+
+[data-theme="dark"] .nice-form-group {
 	--nf-input-color: var(--text-color);
 	--nf-label-color: var(--text-color);
 	--nf-input-background-color: rgb(77 77 77);
 	--nf-valid-input-border-color: rgb(123 123 123);
-  }
+}
+
 body {
 	background: var(--background) url('../images/wave.svg');
 	background-size: cover;
-    background-attachment: fixed;
+	background-attachment: fixed;
 	color: var(--text-color);
 }
+
 .App {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+
 table {
 	border-collapse: collapse;
 	width: 90%;
+	margin-bottom: 20px;
 }
+
 th,
 td {
 	text-align: left;
@@ -41,10 +48,12 @@ td {
 	border: var(--text-color) solid 1px;
 	background-color: var(--background);
 }
+
 th {
 	background-color: #70798c;
 	color: white;
 }
+
 .tableBox {
 	width: 100%;
 	display: flex;
@@ -52,20 +61,24 @@ th {
 	align-items: center;
 	margin-top: 15px;
 }
+
 details {
 	padding: 10px;
 }
+
 div.details {
 	padding: 20px;
 	background-color: var(--btns-background);
 	border-radius: 5px;
 }
-div.details > div {
+
+div.details>div {
 	background-color: var(--details-background);
 	border-radius: 5px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+
 summary {
 	display: flex;
 	cursor: pointer;
@@ -92,3 +105,116 @@ summary::after {
 details[open]>summary::after {
 	transform: rotate(180deg);
 }
+
+@media only screen and (max-width: 450px) {
+	body {
+		background-size: contain;
+		/* background-attachment: unset; */
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	div.wrapper {
+		zoom: 30%;
+	}
+	details.dodaj {
+		width: 92%;
+	}
+	details.plan_lekcji {
+		width: 95%;
+	}
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+	border-radius: 5px;
+    box-shadow: 0 0 5px 5px #555;
+	margin-right: auto;
+    margin-left: auto;
+	width: 95%;
+	height: 20px;
+	background: 
+	  linear-gradient(90deg,#0001 33%,#0005 50%,#0001 66%)
+	  #f2f2f2;
+	background-size:300% 100%;
+	animation: l1 1s infinite linear;
+  }
+  @keyframes l1 {
+	0% {background-position: right}
+  }
+  @media screen and (max-width: 600px) {
+	table {
+	  border: 0;
+	}
+  
+	table caption {
+	  font-size: 1.3em;
+	}
+	
+	table thead {
+	  border: none;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+	
+	table tr {
+	  border-bottom: 3px solid #ddd;
+	  display: block;
+	  margin-bottom: .625em;
+	}
+	
+	table td {
+	  border-bottom: 1px solid #ddd;
+	  display: block;
+	  font-size: .8em;
+	  text-align: right;
+	}
+	
+	table td::before {
+	  /*
+	  * aria-label has no advantage, it won't be read inside a table
+	  content: attr(aria-label);
+	  */
+	  content: attr(data-label);
+	  float: left;
+	  font-weight: bold;
+	  text-transform: uppercase;
+	}
+	
+	table td:last-child {
+	  border-bottom: 0;
+	}
+  }
+  /* top-left border-radius */
+table tr:first-child th:first-child {
+	border-top-left-radius: 10px;
+  }
+  
+  /* top-right border-radius */
+  table tr:first-child th:last-child {
+	border-top-right-radius: 10px;
+  }
+  
+  /* bottom-left border-radius */
+  table tr:last-child td:first-child {
+	border-bottom-left-radius: 10px;
+  }
+  
+  /* bottom-right border-radius */
+  table tr:last-child td:last-child {
+	border-bottom-right-radius: 10px;
+  }
+  table, table th, table td {
+	  border: 1px solid var(--text-color);
+	  border-collapse: collapse;
+	  text-align: center;
+	}
+	table {
+	  border-collapse: separate;
+	  border-spacing: 0;
+	  border: 0;
+	}

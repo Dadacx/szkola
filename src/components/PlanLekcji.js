@@ -12,6 +12,49 @@ function genTD(items, i, gr) {
         {SetName("przedmioty", item.przedmiot)} <b>{item.sala}</b>
     </>);
 }
+const FullTable = ({ gr }) => {
+    return (
+        <div className='tableBox'>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nr</th>
+                        <th>Godzina</th>
+                        <th>Poniedziałek</th>
+                        <th>Wtorek</th>
+                        <th>Środa</th>
+                        <th>Czwartek</th>
+                        <th>Piątek</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {plan_lekcji.godziny.map((g, i) => {
+                        // Sprawdzamy, czy dla tej godziny są lekcje w którymkolwiek dniu
+                        const hasLessons = ['poniedzialek', 'wtorek', 'sroda', 'czwartek', 'piatek'].some(day => plan_lekcji[day].some(item => item.nr === i + 1 && item.grupa === gr)
+                        );
+
+                        // Jeśli nie ma lekcji w żadnym dniu dla tej godziny, pomijamy ten wiersz
+                        if (!hasLessons) {
+                            return null;
+                        }
+
+                        return (
+                            <tr key={i}>
+                                <td data-label="Nr">{i + 1}</td>
+                                <td data-label="Godzina">{g}</td>
+                                <td data-label="Poniedziałek">{genTD(plan_lekcji.poniedzialek, i, gr)}</td>
+                                <td data-label="Wtorek">{genTD(plan_lekcji.wtorek, i, gr)}</td>
+                                <td data-label="Środa">{genTD(plan_lekcji.sroda, i, gr)}</td>
+                                <td data-label="Czwartek">{genTD(plan_lekcji.czwartek, i, gr)}</td>
+                                <td data-label="Piątek">{genTD(plan_lekcji.piatek, i, gr)}</td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+        </div>
+    )
+}
 
 const PlanLekcji = () => {
     const [gr, setGr] = useState(localStorage.getItem('gr') || 'gr1')
@@ -30,51 +73,36 @@ const PlanLekcji = () => {
             <summary>PLAN LEKCJI</summary>
             <div className='details'>
                 <div>
-                <label className="toggler-wrapper style-15">
-                    <input type="checkbox" checked={gr === 'gr1' ? false : true} onChange={toggleGr} />
-                    <div className="toggler-slider">
-                        <div className="toggler-knob"></div>
-                    </div>
-                </label>
-                <div className='tableBox'>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nr</th>
-                                <th>Godzina</th>
-                                <th>Poniedziałek</th>
-                                <th>Wtorek</th>
-                                <th>Środa</th>
-                                <th>Czwartek</th>
-                                <th>Piątek</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {plan_lekcji.godziny.map((g, i) => {
-                                // Sprawdzamy, czy dla tej godziny są lekcje w którymkolwiek dniu
-                                const hasLessons = ['poniedzialek', 'wtorek', 'sroda', 'czwartek', 'piatek'].some(day => plan_lekcji[day].some(item => item.nr === i + 1 && item.grupa === gr)
-                                );
+                    <label className="toggler-wrapper style-15">
+                        <input type="checkbox" checked={gr === 'gr1' ? false : true} onChange={toggleGr} />
+                        <div className="toggler-slider">
+                            <div className="toggler-knob"></div>
+                        </div>
+                    </label>
+                    <FullTable gr={gr} />
+                    {/* <table>
+                        <th>Nr</th>
+                        <th>Godzina</th>
+                        <th>Poniedziałek</th>
 
-                                // Jeśli nie ma lekcji w żadnym dniu dla tej godziny, pomijamy ten wiersz
-                                if (!hasLessons) {
-                                    return null;
-                                }
+                        {plan_lekcji.godziny.map((g, i) => {
+                            // Sprawdzamy, czy dla tej godziny są lekcje w którymkolwiek dniu
+                            const hasLessons = plan_lekcji.poniedzialek.some(item => item.nr === i + 1 && item.grupa === gr && item.grupa !== '')
+                            console.log(hasLessons, plan_lekcji.poniedzialek[i])
+                            // Jeśli nie ma lekcji w żadnym dniu dla tej godziny, pomijamy ten wiersz
+                            if (!hasLessons) {
+                                return null;
+                            }
 
-                                return (
-                                    <tr key={i}>
-                                        <td>{i + 1}</td>
-                                        <td>{g}</td>
-                                        <td>{genTD(plan_lekcji.poniedzialek, i, gr)}</td>
-                                        <td>{genTD(plan_lekcji.wtorek, i, gr)}</td>
-                                        <td>{genTD(plan_lekcji.sroda, i, gr)}</td>
-                                        <td>{genTD(plan_lekcji.czwartek, i, gr)}</td>
-                                        <td>{genTD(plan_lekcji.piatek, i, gr)}</td>
-                                    </tr>
-                                );
-                            })}
-                        </tbody>
-                    </table>
-                </div>
+                            return (
+                                <tr key={i}>
+                                    <td>{i + 1}</td>
+                                    <td>{g}</td>
+                                    <td>{genTD(plan_lekcji.poniedzialek, i, gr)}</td>
+                                </tr>
+                            );
+                        })}
+                    </table> */}
                 </div>
             </div>
         </details>
